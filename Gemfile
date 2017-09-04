@@ -4,4 +4,4 @@ ruby "2.4.0"
 
 gem 'sinatra'
 gem 'rspec'
-gem 'capybara'
+gem 'rack-test'

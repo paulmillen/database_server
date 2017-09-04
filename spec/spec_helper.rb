@@ -1,8 +1,6 @@
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
-require 'capybara/rspec'
 require './models/memory'
-
-Capybara.app = App
+require 'rack/test'
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
