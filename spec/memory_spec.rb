@@ -6,21 +6,19 @@ describe Memory do
     expect(memory).not_to be_nil
   end
 
-  describe '#data' do
-    it 'receives the instantiated argument' do
-      expect(memory.data).to eq :params
+  describe '#return_value' do
+    subject(:memory) { described_class.new( { somekey: 'somevalue' }) }
+
+    it 'returns the set parameter value given the get parameter query string' do
+      expect(memory.return_value( { key: :somekey } )).to eq 'somevalue'
     end
   end
 
   describe '.create' do
-    let(:memory) { described_class.create(:params) }
+    subject(:memory) { described_class.create(:params) }
 
     it 'instantiates a new memory object' do
-      expect(memory).not_to be_nil
-    end
-
-    it 'accepts an object and defines it as an instance variable' do
-      expect(memory.data).to eq :params
+      expect(memory).to respond_to(:return_value)
     end
   end
 
@@ -28,8 +26,8 @@ describe Memory do
     let(:memory) { described_class }
 
     it 'returns a variable storing an instantiated memory object' do
-      memory.create(:params)
-      expect(memory.instance.data).to eq :params
+      memory_object = memory.create(:params)
+      expect(memory.instance).to eq memory_object
     end
   end
 

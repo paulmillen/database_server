@@ -12,8 +12,7 @@ class App < Sinatra::Base
   end
 
   get '/get' do
-    query_key = request.params.values[0]
-    @memory.data[query_key].to_s
+    @memory.return_value(params)
   end
 
   run! if app_file == $0
