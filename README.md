@@ -28,7 +28,7 @@ In CL:
 
 In a browser:
 
-http://localhost:4000/set?somekey=somevalue to store a key:value pair.
+http://localhost:4000/set?somekey=somevalue to store a key:value pair.  
 http://localhost:4000/get?key=somekey to return the stored value within the HTML body.
 
 ### Tests
