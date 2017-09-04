@@ -9,7 +9,7 @@ class App < Sinatra::Base
   end
 
   get '/get' do
-    @memory.return_value(params)
+    @memory.return_value(request.params)
   end
 
 end
