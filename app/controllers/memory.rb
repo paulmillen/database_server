@@ -5,7 +5,7 @@ class App < Sinatra::Base
   end
 
   get '/set' do
-    @memory = Memory.create(request.params)
+    Memory.create(request.params)
   end
 
   get '/get' do
