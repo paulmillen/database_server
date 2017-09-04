@@ -30,5 +30,5 @@ describe Memory do
       expect(memory.instance).to eq memory_object
     end
   end
-
+  
 end

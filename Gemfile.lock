@@ -26,6 +26,8 @@ GEM
       rack (~> 2.0)
       rack-protection (= 2.0.0)
       tilt (~> 2.0)
+    sinatra-partial (0.4.0)
+      sinatra
     tilt (2.0.8)
 
 PLATFORMS
@@ -35,6 +37,7 @@ DEPENDENCIES
   rack-test
   rspec
   sinatra
+  sinatra-partial
 
 RUBY VERSION
    ruby 2.4.0p0

@@ -1,6 +1,8 @@
-require File.join(File.dirname(__FILE__), '..', 'app.rb')
-require './models/memory'
+require File.join(File.dirname(__FILE__), '..', '/app/app.rb')
 require 'rack/test'
+
+require './app/models/memory'
+
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate

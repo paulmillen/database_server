@@ -1,6 +1,3 @@
-require 'sinatra/base'
-require './models/memory'
-
 class App < Sinatra::Base
 
   before do
@@ -14,7 +11,5 @@ class App < Sinatra::Base
   get '/get' do
     @memory.return_value(params)
   end
-
-  run! if app_file == $0
 
 end

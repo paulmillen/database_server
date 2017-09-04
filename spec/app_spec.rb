@@ -19,4 +19,5 @@ describe App do
     expect(last_response.body).not_to include('somekey')
     expect(last_response.body).to include('somevalue')
   end
+  
 end
