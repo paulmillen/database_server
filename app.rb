@@ -2,8 +2,8 @@ require 'sinatra/base'
 
 class App < Sinatra::Base
 
-  get '/' do
-    'infrastructure working'
+  get '/set' do
+    'working'
   end
 
 run! if app_file == $0
